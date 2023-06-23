@@ -4,9 +4,12 @@ on:
   push:
 
 jobs:
-  update:
-    name: Update Site
+  publish:
+    name: Publish Site
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
 
     steps:
       - uses: actions/checkout@v3
