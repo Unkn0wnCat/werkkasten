@@ -3,9 +3,13 @@
 	--color-surface: #f5f5f5;
 	--color-surface-2: #c0c0c0;
 	--color-accent: #e52b3e;
+	--color-text: #000;
+	--color-text-faded: rgba(0, 0, 0, 0.75);
 	--color-error: #f14848;
 	--color-error-text: #fff;
 	--color-disabled: #cacaca;
+
+	--box-shadow: 5px 3px 20px rgba(0, 0, 0, 0.15);
 
 	--layout-width: 1000px;
 	--gap: 20px;
@@ -16,12 +20,28 @@
 @mixin variablesDark {
 	--color-bg: #272b2c;
 	--color-surface: #1e2021;
+	--color-text: #fff;
+	--color-text-faded: rgba(255, 255, 255, 0.75);
+
+	--box-shadow: 5px 3px 20px rgba(0, 0, 0, 0.25);
+}
+
+@mixin animate {
+	transition: all .25s;
+}
+
+@mixin respectReducedMotion {
+	@media(prefers-reduced-motion: reduce) {
+		transition: none !important;
+		animation-play-state: paused !important;
+	}
 }
 
 @mixin boxNoPad {
 	border-radius: var(--border-radius);
 	background-color: var(--color-surface);
-	box-shadow: 5px 3px 20px rgba(0, 0, 0, 0.15);
+	box-shadow: var(--box-shadow);
+	@include animate;
 }
 
 @mixin box {
@@ -40,6 +60,7 @@
 		display: block;
 		border: none;
 		font: inherit;
+		color: inherit;
 
 		&.center {
 			margin: 0 auto;

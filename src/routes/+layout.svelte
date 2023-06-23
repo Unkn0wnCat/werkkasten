@@ -3,29 +3,18 @@
 	import { Voicemail, Info, Settings } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { pwaInfo } from 'virtual:pwa-info';
+	import settings from '$lib/settings';
 
 	import '../global.scss';
 
-	let ReloadPrompt;
+	let ReloadPrompt: any;
 	onMount(async () => {
 		ReloadPrompt = (await import('../components/ReloadPrompt/ReloadPrompt.svelte')).default;
-		/*if (pwaInfo) {
-		const { registerSW } = await import('virtual:pwa-register')
-		registerSW({
-		  immediate: true,
-		  onRegistered(r) {
-			r && setInterval(() => {
-			    console.log('Checking for sw update')
-			    r.update()
-			}, 60*1000)
-			console.log(`SW Registered: ${r}`)
-		  },
-		  onRegisterError(error) {
-			console.log('SW registration error', error)
-		  }
-		})
-	  }*/
 	});
+
+	$: {
+		if(typeof document !== "undefined") document?.documentElement.setAttribute("data-theme", $settings.theme)
+	}
 
 	$: webManifest = pwaInfo ? pwaInfo.webManifest.linkTag : '';
 </script>
@@ -56,7 +45,7 @@
 		footer {
 			@include box;
 			text-align: center;
-			color: rgba(0, 0, 0, 0.75);
+			color: var(--color-text-faded);
 		}
 
 		.navigation {

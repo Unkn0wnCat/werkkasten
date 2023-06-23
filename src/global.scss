@@ -1,7 +1,40 @@
 @import '@fontsource-variable/public-sans/wght.css';
 @import '@fontsource-variable/public-sans/wght-italic.css';
 
+@property --color-bg {
+	syntax: '<color>';
+	initial-value: rgba(0, 0, 0, 0);
+	inherits: true;
+}
+@property --color-surface {
+	syntax: '<color>';
+	initial-value: rgba(0, 0, 0, 0);
+	inherits: true;
+}
+@property --color-text {
+	syntax: '<color>';
+	initial-value: rgba(0, 0, 0, 0);
+	inherits: true;
+}
+@property --color-text-faded {
+	syntax: '<color>';
+	initial-value: rgba(0, 0, 0, 0);
+	inherits: true;
+}
+
 :root {
+	@include variables;
+
+	@media(prefers-color-scheme: dark) {
+		@include variablesDark;
+	}
+}
+
+[data-theme=dark] {
+	@include variablesDark;
+}
+
+[data-theme=light] {
 	@include variables;
 }
 
@@ -17,6 +50,9 @@ body {
 	padding: 0;
 
 	background-color: var(--color-bg);
+	color: var(--color-text);
+
+	@include animate;
 }
 
 a {

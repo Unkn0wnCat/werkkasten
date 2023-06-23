@@ -4,7 +4,8 @@ import { createI18nStore } from 'svelte-i18next';
 
 i18next.use(LanguageDetector).init({
 	detection: {
-		caches: ['localStorage']
+		caches: ['localStorage'],
+		lookupLocalStorage: "language"
 	},
 	debug: false,
 	fallbackLng: "en",
@@ -121,7 +122,11 @@ i18next.use(LanguageDetector).init({
 				},
 				settings: {
 					title: 'Settings',
-					language: 'Language'
+					language: 'Language',
+					theme: "Theme",
+					theme_auto: "Follow System",
+					theme_light: "Light Theme",
+					theme_dark: "Dark Theme"
 				},
 				pwa: {
 					offlineReady: 'werkkasten_ is now available for offline use!',
@@ -246,7 +251,11 @@ i18next.use(LanguageDetector).init({
 				},
 				settings: {
 					title: 'Einstellungen',
-					language: 'Sprache'
+					language: 'Sprache',
+					theme: "Farbschema",
+					theme_auto: "System folgen",
+					theme_light: "Helles Schema",
+					theme_dark: "Dunkles Schema"
 				},
 				pwa: {
 					offlineReady: 'werkkasten_ ist jetzt bereit für Offline-Verwendung.',

@@ -20,7 +20,7 @@ export default defineConfig({
 			},
 			devOptions: {
 				type: 'module',
-				enabled: true
+				enabled: false
 			},
 			manifest: {
 				name: 'werkkasten_',
