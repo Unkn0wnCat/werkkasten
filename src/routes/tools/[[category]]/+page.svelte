@@ -71,6 +71,14 @@
 		grid-template-columns: repeat(3, calc((100% - (2 * var(--gap))) / 3));
 		gap: var(--gap);
 
+		@media(max-width: 1000px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media(max-width: 700px) {
+			grid-template-columns: 1fr;
+		}
+
 		> .tool {
 			@include boxNoPad;
 			display: flex;
@@ -93,8 +101,13 @@
 			}
 
 			.description {
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
 				flex-grow: 1;
 				padding: 0 var(--padding) 0 var(--padding);
+				line-clamp: 4;
+				-webkit-line-clamp: 4;
+				overflow: hidden;
 			}
 
 			.cta-btn {
