@@ -22,6 +22,7 @@
 	--color-surface: #1e2021;
 	--color-text: #fff;
 	--color-text-faded: rgba(255, 255, 255, 0.75);
+	--color-disabled: #3f3f3f;
 
 	--box-shadow: 5px 3px 20px rgba(0, 0, 0, 0.25);
 }
@@ -41,6 +42,7 @@
 	border-radius: var(--border-radius);
 	background-color: var(--color-surface);
 	box-shadow: var(--box-shadow);
+	overflow: hidden;
 	@include animate;
 }
 
@@ -87,6 +89,7 @@
 	textarea {
 		width: 100%;
 		display: block;
+		resize: vertical;
 	}
 }
 

@@ -21,6 +21,7 @@
 
 <svelte:head>
 	{@html webManifest}
+	<meta name="theme-color" content="#e52b3e" />
 </svelte:head>
 
 <div class="werkkasten">

@@ -340,15 +340,34 @@
 		@include boxNoPad;
 		display: flex;
 		align-items: baseline;
-		width: fit-content;
+		width: 100%;
+		overflow-x: auto;
+		max-width: fit-content;
+
+		&::-webkit-scrollbar {
+			height: 5px;
+		}
+		
+		&::-webkit-scrollbar-track {
+			background-color: rgba(150, 150, 150, .5);
+			border-radius: 20px;
+		}
+		
+		&::-webkit-scrollbar-thumb {
+			border-radius: 20px;
+			background-color: darkgrey;
+		}
 
 		input[type='text'],
 		button {
 			background-color: transparent !important;
 			border: none !important;
 			box-shadow: none !important;
-			width: 70px !important;
+			min-width: 65px !important;
+			width: 65px !important;
 			text-align: center !important;
+			padding-left: 0 !important;
+			padding-right: 0 !important;
 		}
 
 		button {

@@ -51,6 +51,7 @@ body {
 
 	background-color: var(--color-bg);
 	color: var(--color-text);
+	accent-color: var(--color-accent);
 
 	@include animate;
 }
