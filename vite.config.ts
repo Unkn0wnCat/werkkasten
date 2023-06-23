@@ -3,6 +3,9 @@ import { defineConfig } from 'vitest/config';
 import { SvelteKitPWA } from '@vite-pwa/sveltekit';
 
 export default defineConfig({
+	define: {
+		'process.env': {} // Workaround for failing service worker
+	},
 	plugins: [
 		sveltekit(),
 		SvelteKitPWA({
