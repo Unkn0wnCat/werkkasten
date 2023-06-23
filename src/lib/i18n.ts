@@ -7,7 +7,7 @@ i18next.use(LanguageDetector).init({
 		caches: ['localStorage']
 	},
 	debug: false,
-	lng: 'en',
+	fallbackLng: "en",
 	resources: {
 		en: {
 			translation: {
