@@ -13,6 +13,11 @@
 	--border-radius: 20px;
 }
 
+@mixin variablesDark {
+	--color-bg: #272b2c;
+	--color-surface: #1e2021;
+}
+
 @mixin boxNoPad {
 	border-radius: var(--border-radius);
 	background-color: var(--color-surface);
