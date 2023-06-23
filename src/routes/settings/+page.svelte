@@ -4,7 +4,7 @@
 	import settings from '$lib/settings';
 
 	const { t, changeLanguage, language } = $i18n;
-	const {theme} = $settings
+	const { theme } = $settings;
 
 	export let data: PageData;
 </script>
@@ -31,14 +31,19 @@
 	<select
 		id="theme"
 		on:input={(e) => {
-			if(e.currentTarget.value !== "auto" && e.currentTarget.value !== "light" && e.currentTarget.value !== "dark") return;
+			if (
+				e.currentTarget.value !== 'auto' &&
+				e.currentTarget.value !== 'light' &&
+				e.currentTarget.value !== 'dark'
+			)
+				return;
 
-			settings.patch({theme: e.currentTarget.value})
+			settings.patch({ theme: e.currentTarget.value });
 		}}
 	>
-		<option value={'auto'} selected={theme == 'auto'}>{t("settings.theme_auto")}</option>
-		<option value={'light'} selected={theme == 'light'}>{t("settings.theme_light")}</option>
-		<option value={'dark'} selected={theme == 'dark'}>{t("settings.theme_dark")}</option>
+		<option value={'auto'} selected={theme == 'auto'}>{t('settings.theme_auto')}</option>
+		<option value={'light'} selected={theme == 'light'}>{t('settings.theme_light')}</option>
+		<option value={'dark'} selected={theme == 'dark'}>{t('settings.theme_dark')}</option>
 	</select>
 </div>
 

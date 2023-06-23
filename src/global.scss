@@ -25,16 +25,16 @@
 :root {
 	@include variables;
 
-	@media(prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: dark) {
 		@include variablesDark;
 	}
 }
 
-[data-theme=dark] {
+[data-theme='dark'] {
 	@include variablesDark;
 }
 
-[data-theme=light] {
+[data-theme='light'] {
 	@include variables;
 }
 

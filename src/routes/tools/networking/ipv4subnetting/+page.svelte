@@ -347,12 +347,12 @@
 		&::-webkit-scrollbar {
 			height: 5px;
 		}
-		
+
 		&::-webkit-scrollbar-track {
-			background-color: rgba(150, 150, 150, .5);
+			background-color: rgba(150, 150, 150, 0.5);
 			border-radius: 20px;
 		}
-		
+
 		&::-webkit-scrollbar-thumb {
 			border-radius: 20px;
 			background-color: darkgrey;

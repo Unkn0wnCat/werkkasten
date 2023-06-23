@@ -71,11 +71,11 @@
 		grid-template-columns: repeat(3, calc((100% - (2 * var(--gap))) / 3));
 		gap: var(--gap);
 
-		@media(max-width: 1000px) {
+		@media (max-width: 1000px) {
 			grid-template-columns: repeat(2, 1fr);
 		}
 
-		@media(max-width: 700px) {
+		@media (max-width: 700px) {
 			grid-template-columns: 1fr;
 		}
 

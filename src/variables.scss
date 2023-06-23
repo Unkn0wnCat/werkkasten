@@ -28,11 +28,11 @@
 }
 
 @mixin animate {
-	transition: all .25s;
+	transition: all 0.25s;
 }
 
 @mixin respectReducedMotion {
-	@media(prefers-reduced-motion: reduce) {
+	@media (prefers-reduced-motion: reduce) {
 		transition: none !important;
 		animation-play-state: paused !important;
 	}

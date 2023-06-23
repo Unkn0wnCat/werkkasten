@@ -13,7 +13,8 @@
 	});
 
 	$: {
-		if(typeof document !== "undefined") document?.documentElement.setAttribute("data-theme", $settings.theme)
+		if (typeof document !== 'undefined')
+			document?.documentElement.setAttribute('data-theme', $settings.theme);
 	}
 
 	$: webManifest = pwaInfo ? pwaInfo.webManifest.linkTag : '';
@@ -27,7 +28,9 @@
 <div class="werkkasten">
 	<nav class="navigation">
 		<a href="/" class="logo">werkkasten_</a>
-		<a href="/tools" title={$i18n.t('navigation.tools')}><FolderTree/> <span>{$i18n.t('navigation.tools')}</span></a>
+		<a href="/tools" title={$i18n.t('navigation.tools')}
+			><FolderTree /> <span>{$i18n.t('navigation.tools')}</span></a
+		>
 		<!--<a href="/datasette" title={$i18n.t('navigation.datasette')}><Voicemail /></a>-->
 		<a href="/settings" title={$i18n.t('navigation.settings')}><Settings /></a>
 		<a href="/about" title={$i18n.t('navigation.about')}><Info /></a>
@@ -61,9 +64,9 @@
 				align-items: center;
 				padding: var(--padding);
 				color: var(--color-accent);
-				gap: calc(.5 * var(--gap));
+				gap: calc(0.5 * var(--gap));
 
-				@media(width < 600px) {
+				@media (width < 600px) {
 					span {
 						display: none;
 					}
