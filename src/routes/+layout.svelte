@@ -1,6 +1,6 @@
 <script lang="ts">
 	import i18n from '$lib/i18n';
-	import { Voicemail, Info, Settings } from 'lucide-svelte';
+	import { Voicemail, Info, Settings, Wrench, FolderTree } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { pwaInfo } from 'virtual:pwa-info';
 	import settings from '$lib/settings';
@@ -26,7 +26,7 @@
 <div class="werkkasten">
 	<nav class="navigation">
 		<a href="/" class="logo">werkkasten_</a>
-		<a href="/tools">{$i18n.t('navigation.tools')}</a>
+		<a href="/tools" title={$i18n.t('navigation.tools')}><FolderTree/> <span>{$i18n.t('navigation.tools')}</span></a>
 		<!--<a href="/datasette" title={$i18n.t('navigation.datasette')}><Voicemail /></a>-->
 		<a href="/settings" title={$i18n.t('navigation.settings')}><Settings /></a>
 		<a href="/about" title={$i18n.t('navigation.about')}><Info /></a>
@@ -60,6 +60,13 @@
 				align-items: center;
 				padding: var(--padding);
 				color: var(--color-accent);
+				gap: calc(.5 * var(--gap));
+
+				@media(width < 600px) {
+					span {
+						display: none;
+					}
+				}
 
 				&.logo {
 					font-weight: 600;
