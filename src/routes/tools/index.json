@@ -1,0 +1,112 @@
+{
+	"tools": [
+		{
+			"tool": "rot",
+			"category": "crypto",
+			"additionalLinks": [
+				{
+					"type": "wikipedia",
+					"title": "ROT13",
+					"href": "https://en.wikipedia.org/wiki/ROT13",
+					"lang": "en"
+				},
+				{
+					"type": "wikipedia",
+					"title": "ROT13",
+					"href": "https://de.wikipedia.org/wiki/ROT13",
+					"lang": "de"
+				}
+			]
+		},
+		{
+			"tool": "base64",
+			"category": "encodings",
+			"additionalLinks": [
+				{
+					"type": "wikipedia",
+					"title": "Base64",
+					"href": "https://en.wikipedia.org/wiki/Base64",
+					"lang": "en"
+				},
+				{
+					"type": "wikipedia",
+					"title": "Base64",
+					"href": "https://de.wikipedia.org/wiki/Base64",
+					"lang": "de"
+				}
+			]
+		},
+		{
+			"tool": "linuxpermissions",
+			"category": "encodings",
+			"additionalLinks": [
+				{
+					"type": "wikipedia",
+					"title": "chmod",
+					"href": "https://en.wikipedia.org/wiki/Chmod#Numeric_example",
+					"lang": "en"
+				},
+				{
+					"type": "wikipedia",
+					"title": "chmod",
+					"href": "https://de.wikipedia.org/wiki/Chmod#Numerisch",
+					"lang": "de"
+				}
+			]
+		},
+		{
+			"tool": "urlencode",
+			"category": "encodings",
+			"additionalLinks": [
+				{
+					"type": "wikipedia",
+					"title": "URL encoding",
+					"href": "https://en.wikipedia.org/wiki/URL_encoding",
+					"lang": "en"
+				},
+				{
+					"type": "wikipedia",
+					"title": "URL-Encoding",
+					"href": "https://de.wikipedia.org/wiki/URL-Encoding",
+					"lang": "de"
+				}
+			]
+		},
+		{
+			"tool": "ipv4subnetting",
+			"category": "networking",
+			"additionalLinks": [
+				{
+					"type": "wikipedia",
+					"title": "Internet Protocol version 4",
+					"href": "https://en.wikipedia.org/wiki/Internet_Protocol_version_4#Addressing",
+					"lang": "en"
+				},
+				{
+					"type": "wikipedia",
+					"title": "IPv4",
+					"href": "https://de.wikipedia.org/wiki/IPv4#Adressformat",
+					"lang": "de"
+				}
+			]
+		},
+		{
+			"tool": "base",
+			"category": "numbers",
+			"additionalLinks": [
+				{
+					"type": "wikipedia",
+					"title": "Positional notation",
+					"href": "https://en.wikipedia.org/wiki/Positional_notation#Base_of_the_numeral_system",
+					"lang": "en"
+				},
+				{
+					"type": "wikipedia",
+					"title": "Stellenwertsystem",
+					"href": "https://de.wikipedia.org/wiki/Stellenwertsystem#Basis",
+					"lang": "de"
+				}
+			]
+		}
+	]
+}

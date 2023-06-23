@@ -1,0 +1,25 @@
+@import '@fontsource-variable/public-sans/wght.css';
+@import '@fontsource-variable/public-sans/wght-italic.css';
+
+:root {
+	@include variables;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-family: 'Public Sans Variable', sans-serif;
+
+	margin: 0;
+	padding: 0;
+
+	background-color: var(--color-bg);
+}
+
+a {
+	color: inherit;
+	text-decoration: underline dotted currentColor;
+}
