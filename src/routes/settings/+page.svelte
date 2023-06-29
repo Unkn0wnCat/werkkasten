@@ -3,7 +3,7 @@
 	import type { PageData } from './$types';
 	import settings from '$lib/settings';
 
-	const { t, changeLanguage, language } = $i18n;
+	let { t, changeLanguage, language } = $i18n;
 	const { theme } = $settings;
 
 	export let data: PageData;
