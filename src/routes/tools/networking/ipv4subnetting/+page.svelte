@@ -300,7 +300,7 @@
 		<span class={'fake-field monospace'}>
 			{#if address || address === 0}
 				{#each address.toString(2).padStart(32, '0').split('') as bit, index}
-					<span style:color={index >= (subnet || 32) ? 'red' : undefined}>{bit}</span>
+					<span style:color={index >= (subnet || 32) ? 'red' : undefined} class:endofoctet={index % 8 == 7 && index != 31}>{bit}</span>
 				{/each}
 			{/if}
 			{#if !(address || address === 0)}
@@ -315,7 +315,7 @@
 		<span class={'fake-field monospace'}>
 			{#if subnetBinary || subnetBinary === 0}
 				{#each subnetBinary.toString(2).padStart(32, '0').split('') as bit, index}
-					<span style:color={index >= (subnet || 32) ? 'red' : undefined}>{bit}</span>
+					<span style:color={index >= (subnet || 32) ? 'red' : undefined} class:endofoctet={index % 8 == 7 && index != 31}>{bit}</span>
 				{/each}
 			{/if}
 			{#if !(subnetBinary || subnetBinary === 0)}
@@ -330,9 +330,13 @@
 		font-family: monospace !important;
 		font-size: 1.2em !important;
 
+		.endofoctet {
+			margin-right: 6px;
+		}
+
 		span {
 			display: inline-block;
-			width: 12px;
+			width: 11px;
 		}
 	}
 
